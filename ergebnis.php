@@ -1,14 +1,19 @@
 <?php
-                if(isset($_POST["calc"]))
+                if (isset($_GET["calc"]))
                 {
-                    $first_nr=$_POST["first_nr"];
-                    $second_nr=$_POST["second_nr"];
-                    $selection=$_POST["selection"];
+                    $first_nr=$_GET["first_nr"];
+                    $second_nr=$_GET["second_nr"];
+                    $selection=$_GET["selection"];
                     $result= 0;
-                
-               
 
-                    switch ($selection){
+                    if ($first_nr == "" && $second_nr == "") {
+                        
+                        header('location:index.php?w_msg= Bitte Zahlen eintragen.');
+                                return;
+                    }
+                    else 
+                    {
+                         switch ($selection){
                         
                         case '+':
                             $result = $first_nr + $second_nr;
@@ -31,7 +36,12 @@
                         }
                         header('location:index.php?r_msg='. $result);
 
+                    }
+                
+               
 
+                   
+                    
 
 
 
@@ -39,6 +49,7 @@
                     
                    
             }
+            
             ?>
                   
 

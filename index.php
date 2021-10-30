@@ -9,7 +9,7 @@
       <div class="container" style="margin-top:20px;">
       <h1 style="text-align:center;">Taschenrechner</h1>
            
-      <form action="ergebnis.php" method="post">
+      <form action="ergebnis.php" method="get">
               <div class="form-group">
                 <label for="first_nr">Zahl 1</label>
                 <input type="text" class="form-control" name="first_nr">
