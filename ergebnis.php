@@ -31,7 +31,6 @@
                         }
                         header('location:index.php?r_msg='. $result);
 
-                    /*echo "<h1 class='text-info'>$result</h1>";*/
 
 
 
